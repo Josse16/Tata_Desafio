@@ -25,6 +25,7 @@ public class ConversionController {
     		@RequestHeader("monto") double monto) {
 		ConversionDTO response = null;
 		Conversion conversion = repository.findByMonedaOrigenAndMonedaDestino(monOri, monDes);
+		System.out.println("conversion: " + conversion);
 		if (conversion!=null) {
 			response = new ConversionDTO();
 			response.setMonedaDestino(monDes);
